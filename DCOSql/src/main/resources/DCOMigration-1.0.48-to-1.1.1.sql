@@ -1,0 +1,7 @@
+/**
+* Migration script from 1.0.48 to 1.1.1
+* XBAS V2
+*/
+
+ALTER TABLE user ADD COLUMN XBAS tinyint(1) NOT NULL DEFAULT 0 AFTER `LOCKED`;
+ALTER TABLE document ADD COLUMN XBAS tinyint(1) NOT NULL DEFAULT 0 AFTER `RESIDENT`;
