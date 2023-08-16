@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00bd6d;
+      }
+    </style>
+  </defs>
+  <title>fieldCorrect</title>
+  <polygon class="cls-1" points="5 10 0 5.96 1.9 3.65 4.8 6 10.89 0 13 2.11 5 10"/>
+</svg>

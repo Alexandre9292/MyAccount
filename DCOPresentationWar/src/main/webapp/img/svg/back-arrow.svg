@@ -1,0 +1,11 @@
+<svg id="Arrow" xmlns="http://www.w3.org/2000/svg" width="74.5" height="71.77" viewBox="0 0 74.5 71.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>back-arrow</title>
+  <polygon id="Back_arrow" data-name="Back arrow" class="cls-1" points="0 35.88 35.88 71.77 39.45 68.21 9.64 38.4 74.5 38.4 74.5 33.37 9.64 33.37 39.45 3.56 35.88 0 0 35.88"/>
+</svg>
