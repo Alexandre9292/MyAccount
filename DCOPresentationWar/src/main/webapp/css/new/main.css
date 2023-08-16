@@ -1,0 +1,1504 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/*
+********* RESETS *********
+*/
+
+html {
+	font-size: 62.5%;
+	line-height: 1.4;
+}
+
+.bnpAccount {
+	background-color: #e9e9e9;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+
+/*
+********* FOOTER LOGIN LIKE *********
+*/
+
+.meta-footer {
+    background-color: #fff;
+    border-top: 2px solid #15925f;
+    display: block;
+    height: 48px;
+    width: auto;
+    
+    color: #1d1d1b;
+    font-family: "BNPSans",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.meta-footer .container {
+	width: 1180px;
+	margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer-baseline {
+	width: 50%;
+	float: left;
+	
+	font-family: "BNPSans",Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 48px;
+    position: relative;
+    
+    min-height: 1px;
+    padding-left: 120px;
+    padding-right: 20px;
+}
+
+.footer-logo  {
+	background: transparent url(../../img/new/bnpp-logo-footer.png) 0 0 no-repeat;
+	float: left;
+	margin: 0 24px 0 0;
+	position: relative;
+	top: 7px;
+	height: 28px;
+	width: 136px;}
+
+.meta-footer .footer-list {
+	width: 41.66667%;
+	float: right;
+	
+    font-family: "BNPRounded",Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 16px 0;
+}
+
+.meta-footer .footer-list li:first-child {
+    border-left: medium none;
+}
+.meta-footer .footer-list li {
+    border-left: 1px solid #1d1d1b;
+    float: left;
+    padding: 0 5px;
+}
+
+
+
+/*
+********* BASE *********
+*/
+
+.bnpAccount-main {
+	display: block; /*pour internet explorer*/
+	background-color: #fff;
+	width: 63%; /*1024/1625*/
+	min-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+********* LAYOUT *********
+*/
+
+.bnpAccount-main-header {
+	background-color: #222;
+}
+
+.bnpAccount-main-header .bnpAccount-btn--big {
+	width: 140px;
+}
+
+.bnpAccount-main-header,
+.bnpAccount-companyResume,
+.bnpAccount-moreInfo {
+	color: #fff;
+}
+
+.bnpAccount-main-header-title {
+	margin-bottom: 0;
+	margin-left: 5.37109375%;
+	float: left;
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 2.7222222222222223; /*49/18*/
+}
+
+.bnpAccount-companyResume {
+	background-color: #31a871;
+	min-height: 213px;
+	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+}
+
+/** 
+********* MESSAGES *********
+*/
+.infoBlock {
+	font-size: 1.3rem;
+	border: none;
+	clear: both;
+}
+
+.errorblock {
+	font-size: 1.3rem;
+	color: #A94442;
+	background-color: #f2DEDE;
+	border: 1px solid #eBCCD1;
+	padding: 8px;
+	margin: 16px;
+}
+
+.warningblock {
+	font-size: 1.3rem;
+	color: #aca868;
+	background-color: #fefec0;
+	border: 1px solid #dfd78e;
+	padding: 8px;
+	margin: 16px;
+}
+
+.confirmblock {
+	font-size: 1.3rem;
+	color: #82b78d;
+	background-color: #ddf4e2;
+	border: 1px solid #98c99c;
+	padding: 8px;
+	margin: 16px;
+}
+
+/*
+********* ELEMENTS *********
+*/
+
+.bnpAccount-main-header-title,
+.bnpAccount-inscriptionList-mainTitle,
+.bnpAccount-companyResume-mainTitle,
+.bnpAccount-infoRequest--title,
+.bnpAccount-modal-title {
+	margin-top: 0;
+}
+
+.bnpAccount-companyResume-backLink {
+	float: left;
+	margin-right: 60px;
+}
+
+.bnpAccount-companyResume-footer {
+	position: absolute;
+	left: 0; right: 0; bottom: -1px;
+	padding-left: 25px; padding-right: 25px;
+}
+
+.bnpAccount-companyResume-scrollContainer {
+	position: relative;
+	width: calc(100% - 125px); /*largeur de buttons*/
+	height: 40px;
+    overflow: hidden;
+}
+
+.bnpAccount-companyResume-scroll {
+	position: absolute;
+	left: 0;
+	transform: translateX(0);
+    transition: transform .3s ease-in;
+    white-space: nowrap;
+}
+
+.bnpAccount-completeLevelSvg {
+	border-radius: 50%;
+	float: right;
+}
+
+.bnpAccount-completeLevelSvg--small {
+	min-width: 4.8rem;
+	position: absolute;
+    right: 5.37109375%;
+    top: 3.5rem;
+    float: none;
+}
+
+.bnpAccount-completeLevelSvg--huge {
+	box-shadow: 1px 1px 5px #717171;
+}
+
+.bnpAccount-completeLevelSvg--huge > circle {
+	stroke-width: 120px;
+}
+
+.bnpAccount-completeLevel--big > circle {
+	stroke-width: 64px;
+}
+
+.bnpAccount-completeLevelSvg--small > circle {
+	stroke-width: 24px;
+}
+
+.bnpAccount-completeLevel--big .bnpAccount-completeLevel-back {
+	stroke: #fff;
+}
+
+.bnpAccount-completeLevelSvg--small .bnpAccount-completeLevel-back,
+.bnpAccount-completeLevelSvg--huge .bnpAccount-completeLevel-back {
+	stroke: #d8d8d8;
+}
+
+.bnpAccount-svg-country {
+	stroke: #e8e8e8;
+    fill: #e6e6e6!important; /*firefox bug correction*/
+    fill-rule: evenodd;
+}
+
+.bnpAccount-Map-svg {
+	float: right;
+}
+
+#bnpAccount-svg-Europe path,
+#bnpAccount-svg-Europe polygon {
+	fill: #19bc66;
+	stroke: #e8e8e8;
+}
+
+#bnpAccount-svg-Other-countries path {
+    stroke: #e8e8e8;
+    fill: #ccc;
+}
+
+.bnpAccount-completeLevel-back {
+	fill:none;
+}
+
+.bnpAccount-completeLevel--front {
+	stroke: #00bd6d;
+	fill: none;
+}
+
+.bnpAccount-completeLevel-value,
+.bnpAccount-completeLevel--big .bnpAccount-completeLevel-value {
+	font-size: 1.2rem;
+	fill: #fff;
+}
+
+.bnpAccount-completeLevelSvg--huge .bnpAccount-completeLevel-value {
+	font-size: 2.5rem;
+	font-weight: bold;
+	fill: #00bd6d;
+}
+
+.bnpAccount-inscriptionList {
+	counter-reset: inscription;
+	margin-top: 0;
+}
+
+.bnpAccount-infoRequest--title {
+	font-weight: 700;
+	max-width: 90%;
+}
+
+.bnpAccount-inscriptionList > li {
+	position: relative;
+	transition: background-color .3s ease-in;
+}
+
+.bnpAccount-signatoriesResume {
+	margin-top: 20px;
+/* 	margin-left: -55px; */
+/* 	margin-right: -55px; */
+}
+
+.bnpAccount-signatoriesResume.is-open {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.bnpAccount-signatoriesResume .bnpAccount-inscriptionList-mainTitle {
+	margin-top: 0;
+	padding-left: 193px;
+}
+
+.bnpAccount-inscriptionList-mainTitle .bnpAccount-btn {
+	margin-left: 15px;
+	min-width: 110px;
+}
+
+.bnpAccount-signatoriesResume-content {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-start;
+}
+
+.bnpAccount-signatoriesResume-content > p {
+	max-width: 200px;
+    overflow-x: hidden;
+    text-align: center;
+    width: 150px;
+}
+
+.bnpAccount-signatoriesResume-content dl {
+	margin-top: 0;
+	padding-top: 15px;
+	width: 500px;
+}
+
+.bnpAccount-signatoriesResume-content dl:last-of-type {
+	padding-bottom: 15px;
+}
+
+.bnpAccount-signatoriesResume-content/*:not(:last-child)*/ dl {
+	border-bottom: 1px solid #ccc;
+}
+
+.bnpAccount-inscriptionList > li {
+	counter-increment: inscription;
+}
+
+.bnpAccount-listElement {
+	border-bottom: 1px solid #d5d5d5;
+	overflow: hidden;
+}
+
+.bnpAccount-inscriptionListItem--slidedUp {
+	background-color: #EFECEC;
+}
+
+.bnpAccount-resumeDataList--customerRepresentative {
+	min-height: 26px;
+	padding: 10px 15px;
+}
+
+.bnpAccount-resumeDataList--customerRepresentative .bnpAccount-resumeDataList-actionBtns {
+	top: 5px; right: -10px;
+}
+
+.bnpAccount-inscriptionList > li::before {
+    content: "0"counter(inscription);
+    font-family: 'Roboto', sans-serif;
+    font-size: 6.9rem;
+    line-height: 1;
+    min-width: 77px;
+    position: absolute;
+}
+
+.bnpAccount-inscriptionList-content {
+	margin-left: 136px;
+	margin-right: 108px;
+}
+
+.bnpAccount-inscriptionListItem--slidedUp .bnpAccount-txtOpen {
+    display: inline-block;
+    opacity: 1;
+    transition: transform .2s,opacity .2s;
+    transform: translate(0);
+}
+
+.bnpAccount-txtOpen {
+    opacity: 0;
+    transform: translate(10px);
+}
+
+.bnpAccount-txtClose {
+	white-space: nowrap;
+    position: absolute;
+    left: 0;
+	opacity: 1;
+    transform: translate(0);
+    transition: transform .3s,opacity .3s;
+}
+
+.bnpAccount-inscriptionListItem--slidedUp .bnpAccount-txtClose {
+    transform: translate(-20px);
+    opacity: 0;
+}
+
+[class*=slideContent] {
+	max-height: 0;
+	overflow-x: visible;
+	overflow-y: hidden;
+	transition: max-height .3s ease-in;
+}
+
+[class*=slideContent].is-open {
+	max-height: 160rem;
+	overflow-y: visible;
+}
+
+.bnpAccount-signatoriesResume.is-open {
+	max-height: 52rem;
+	overflow-y: auto;
+}
+
+.bnpAccount-formIntro {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1.7rem;
+	width: 60%;
+}
+
+.bnpAccount-modal .bnpAccount-formIntro {
+	width: auto;
+}
+
+.bnpAccount-fieldSet {
+	border: 0;
+	padding: 0;
+}
+
+[class*=bnpAccount-fieldGroup--] input {
+	position: absolute;
+	opacity: 0;
+}
+
+.bnpAccount-fieldGroup--radio label:not(:last-child) {
+	margin-right: 10px;
+}
+
+.bnpAccount-fieldGroup .bnpAccount-btn + .bnpAccount-btn {
+	margin-left: 20px;
+}
+
+.bnpAccount-changedUi {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	border: 1px solid #d1d1d1;
+	margin-right: 10px;
+	box-shadow: inset 1px 1px 5px hsla(0, 0%,0%, .3);
+}
+
+.bnpAccount-radioCircle {
+	border-radius: 50%;
+}
+
+.bnpAccount-checkbox-check {
+	fill: #fff;
+	top: 50%; left: 50%;
+	transform: translate(-49%,-50%) scale(.1);
+}
+
+.bnpAccount-checkbox-check,
+.bnpAccount-radioCircle::after {
+	position: absolute;
+	transition: all .3s ease-in-out;
+	opacity: 0;
+}
+
+.bnpAccount-radioCircle::after {
+	content: '';
+	top: -1px; left: -1px; bottom: -1px; right: -1px;
+	border: 2px solid #00bd6d;
+	box-shadow: inset 1px 1px 5px hsla(0, 0%,0%, .5);
+	background-image: radial-gradient(circle, #fff 0, #fff 30%, #00bd6d 0);
+	transform: scale(.1);
+	background-position: 1px 0;
+	border-radius: inherit;
+}
+
+input[type=radio]:checked + .bnpAccount-radioCircle::after,
+input[type=checkbox]:checked ~ .bnpAccount-checkbox .bnpAccount-checkbox-check {
+	opacity: 1;
+}
+
+input[type=checkbox]:checked ~ .bnpAccount-checkbox .bnpAccount-checkbox-check {
+	transform: translate(-49%,-50%) scale(1);
+}
+
+input[type=radio]:checked + .bnpAccount-radioCircle::after {
+	transform: scale(1);
+}
+
+.bnpAccount-infoRequest {
+    position: absolute;
+	z-index: 2;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px hsla(0,0%,0%,.3);
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bnpAccount-infoRequest-container {
+	max-height: 150px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.bnpAccount-infoRequest-signatories-container {
+	max-height: 400px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.bnpAccount-infoRequest--solo {
+	width: 220px;
+}
+
+.bnpAccount-infoRequest--double {
+	width: 300px;
+}
+
+.bnpAccount-infoRequest--action {
+	width: 380px;
+}
+
+.bnpAccount-grid--infoRequest {
+	margin-bottom: 10px;
+}
+
+.bnpAccount-grid--infoRequest > * {
+	position: relative;
+}
+
+.bnpAccount-infoRequest--double .bnpAccount-grid--infoRequest > * {
+	width: 50%;
+}
+
+.bnpAccount-grid--infoRequest > * + * {
+	padding-left: 10px;
+}
+
+.bnpAccount-grid--infoRequest > * + *::before {
+	content: '';
+	width: 1px;
+	position: absolute;
+	top: 28px; bottom: 0; left: 0;
+	background-color: #ccc;
+}
+
+.bnpAccount-grid--infoRequest-noTitle {
+	padding-top: 28px;
+}
+
+.bnpAccount-infoRequest::after {
+	content: '';
+    height: 0;
+    width: 0;
+    border-width: 22px 15px 0;
+    border-top-color: #fff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-style: solid;
+    border-bottom-style: none;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-filter: drop-shadow(2px 2px 1px hsla(0,0%,0%,.3));
+}
+
+.bnpAccount-infoRequest .bnpAccount-fieldGroup {
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+}
+
+.bnpAccount-infoRequest-label {
+	font-style: italic;
+}
+
+.bnpAccount-unorderedList--Signatories,
+.bnpAccount-unorderedList--Rules,
+.bnpAccount-signatories,
+#bnpAccount-legalDocument-description,
+.bnpAccount-infoRequest--uiReplace {
+	display: none;
+}
+
+.bnpAccount-infoRequest--uiReplace {
+	position: absolute;
+	left: 0; bottom: 3px;
+}
+
+input:checked ~ .bnpAccount-infoRequest--uiReplace {
+	display: block;
+}
+
+.bnpAccount-fieldSet > legend {
+	margin-bottom: 15px;
+}
+
+.bnpAccount-labelRequired::after {
+	content: '*';
+	margin-left: 5px;
+}
+
+.bnpAccount-svg--userGroupSmall,
+.bnpAccount-svg--userSmall {
+	height: 14px;
+}
+
+.bnpAccount-svg--userSmall {
+	width: 15px;
+}
+
+.bnpAccount-svg--userGroupSmall {
+	width: 18px;
+}
+
+[class*=bnpAccount-btn] [class*=bnpAccount-svg] {
+	margin-right: 5px;
+}
+
+[class*=bnpAccount-svg] path:not([fill]) {
+	fill: currentColor;
+}
+
+.bnpAccount-svg--userBig {
+	width: 83px;
+	height: 85px;
+}
+
+.bnpAccount-svg--userBig path {
+	fill: #000;
+}
+
+.bnpAccount-resumeDataList {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.bnpAccount-resumeDataList--company,
+.bnpAccount-resumeDataList--address,
+.bnpAccount-resumeDataList > dt,
+.bnpAccount-resumeDataList > dd {
+	display: inline-block;
+    vertical-align: top;
+}
+
+.bnpAccount-resumeDataList > dt {
+	color: #b0b0b0;
+}
+
+.bnpAccount-completeLevel-subValue {
+	fill: #b0b0b0;
+}
+
+.bnpAccount-resumeDataList > dd {
+	margin-left: 0;
+	padding-right: 1.5rem;
+}
+
+.bnpAccount-resumeDataList--info > dt {
+	width: 94px;
+}
+
+.bnpAccount-resumeDataList--documents > dd {
+	width: calc(90% - 166px); /*166 = 142 + 24*/
+}
+
+.bnpAccount-resumeDataList--documents > dt {
+	margin-right: 24px;
+	width: 142px;
+}
+
+.bnpAccount-resumeDataList--company,
+.bnpAccount-resumeDataList--address{
+	width: 400px;	/* 360px */
+}
+
+.bnpAccount-resumeDataList[class*=bnpAccount-resumeDataList--] {
+	font-size: 1.15rem;
+}
+
+.bnpAccount-resumeDataList--company > dt {
+	width: 150px;
+}
+
+.bnpAccount-resumeDataList--address > dt {
+	width: 55px;
+}
+
+.bnpAccount-resumeDataList--info > dd {
+	width: calc(90% - 250px);	/* 94px */
+}
+
+.bnpAccount-resumeDataList--company > dd {
+	width: calc(100% - 160px);
+}
+
+.bnpAccount-resumeDataList--address > dd {
+	width: calc(100% - 55px);
+}
+
+.bnpAccount-countryContainer {
+	width: 180px;
+}
+
+.bnpAccount-countryContainer .bnpAccount-field,
+.bnpAccount-countryContainer [class*=bnpAccount-btn],
+.bnpAccount-infoRequest-btn {
+	width: 100%;
+}
+
+.bnpAccount-infoRequest-btn {
+	max-width: 130px;
+}
+
+.bnpAccount-actionBtns-container:hover > [class*=-actionBtns],
+.bnpAccount-resumeDataList-container:hover .bnpAccount-resumeDataList-actionBtns {
+	opacity: 1;
+}
+
+[class$=-actionBtns] {
+	position: absolute;
+	opacity: 0;
+	transition: opacity .3s ease-in;
+	min-width: 78px;
+}
+
+.bnpAccount-signatoriesResume-actionBtns {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 142%);
+}
+
+.bnpAccount-resumeDataList-actionBtns {
+	top: 0; right: -15px;
+}
+
+.bnpAccount-SignatoryGroup-actionBtns {
+	right: 0;
+	min-width: auto;
+}
+
+.bnpAccount-p-mainContent > .bnpAccount-resumeDataList-actionBtns  {
+	top: 3.5rem;
+	right: 55px;
+}
+
+.bnpAccountresumeDataList-action-btn {
+	padding: 0;
+	background-color: transparent;
+}
+
+.bnpAccountresumeDataList-action-btn + .bnpAccountresumeDataList-action-btn,
+.bnpAccount-SignatoryGroup-actionBtns .bnpAccount-btn + .bnpAccount-btn {
+	margin-left: 10px;
+}
+
+.bnpAccount-signatoryBloc,
+.bnpAccount-infoRequestParent,
+.bnpAccount-resumeDataList-container,
+.bnpAccount-actionBtns-container {
+	position: relative;
+}
+
+.bnpAccount-infoRequestParent {
+    display: inline-block;
+}
+
+[class*=bnpAccount-grid] .bnpAccount-infoRequestParent {
+    width: auto;
+}
+.bnpAccount-infoRequestParent2 {
+    display: inline-block;
+     width: auto;
+}
+
+.bnpAccount-signatoryBloc::before {
+	content: '';
+	position: absolute;
+	background-image: url(../../img/svg/user.svg);
+	left: -139px; top: 0;
+	width: 83px;
+	height: 84.92px;
+}
+
+.bnpAccount-rulesList p {
+	margin-bottom: 10px;
+}
+
+.bnpAccount-rulesList > li {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.bnpAccount-rulesList > li:not(:last-of-type)::after {
+	content: '';
+	height: 0;
+	width: 0;
+	display: inherit;
+	margin-left: 7px;
+	margin-right: 7px;
+	border-color: transparent transparent transparent #ccc;
+	border-style: solid;
+	border-width: 5px 0 5px 8px;
+}
+
+.bnpAccount-rulesList > li:not(:last-of-type)::after,
+.bnpAccount-rulesList-btnReverse {
+	vertical-align: inherit;
+}
+
+.bnpAccount-rulesList-btnReverse {
+	color: #b0b0b0;
+	min-width: 200px;
+}
+
+.bnpAccount-rulesList-btnReverse:disabled {
+	background-color: #f1f1f1;
+}
+
+.bnpAccount-rulesList-btnReverse2{
+	vertical-align: inherit;
+	color: #b0b0b0;
+	min-width: 200px;
+}
+
+.bnpAccount-rulesList-btnReverse2:disabled{
+	background-color: #f1f1f1;
+}
+
+.bnpAccount-table--rules {
+      border-spacing: 0;
+      table-layout: fixed;
+      width: 100%;
+}
+
+.bnpAccount-table--rules,
+.bnpAccount-table--rules th,
+.bnpAccount-table--rules td {
+      border: 1px solid #d5d5d5;
+      font-size: 1rem;
+}
+
+.bnpAccount-table--rules th,
+.bnpAccount-table--rules td {
+      padding: 3px 5px;
+      white-space: normal;
+}
+
+/*
+********* MODAL *********
+*/
+
+.bnpAccount-modalContainer {
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top:0; bottom: 0; left:0; right: 0;
+	opacity: 0;
+	transition: opacity .3s ease-in;
+	display: none;
+	cursor: pointer;
+}
+
+.bnpAccount-modalContainer.is-open {
+	opacity: 1;
+	display: block;
+}
+
+.bnpAccount-modal {
+	background-color: #fff;
+	padding: 6rem 4rem;
+	position: absolute;
+	top: 50%; left: 50%;
+	transition: transform .3s ease-in-out;
+}
+
+.bnpAccount-modalContainer.is-open .bnpAccount-modal {
+	transform: translate(-50%,-50%);
+}
+
+.bnpAccount-modal--small {
+	max-width: 370px;
+}
+
+/*
+********* HELP CLASSES *********
+*/
+
+[class*=mainTitle] {
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 1px;
+}
+
+[class*=mainTitle],
+.bnpAccount-infoRequest--title,
+.bnpAccount-modal-title {
+	text-transform: uppercase;
+}
+
+[class*=mainTitle],
+.bnpAccount-companyResume-subTitle {
+	font-weight: 400;
+}
+
+.bnpAccount-inscriptionList-mainTitle {
+	font-size: 1.9rem;
+}
+
+.bnpAccount-modal-title {
+	font-size: 2.5rem;
+}
+
+.bnpAccount-text--left {
+	text-align: left;
+}
+
+.bnpAccount-text--center {
+	text-align: center;
+}
+
+.bnpAccount-text--right {
+	text-align: right;
+}
+
+.bnpAccount-resumeDataList--info ol,
+.bnpAccount-unorderedList {
+	padding-left: 0;
+}
+
+.bnpAccount-unorderedList {
+	list-style: none;
+}
+
+.bnpAccount-resumeDataList--info ol {
+	list-style-position: inside;
+}
+
+.bnpAccount-companyResume-footer-mainTitle {
+	min-width: 180px;
+	display: inline-block;
+	vertical-align: bottom;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	line-height: 4rem;
+	margin-top: 0;
+/*	margin-right: 1rem; */
+	margin-bottom: 0;
+	background-color: #fff;
+	color: #212b2c;
+}
+
+.bnpAccount-p-mainContent,
+.bnpAccount-plr-mainContent {
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.bnpAccount-p-mainContent {
+	padding-top:3.5rem;
+	padding-bottom: 3.5rem;
+}
+
+.bnpAccount-mt-big {
+	margin-top: 3.5rem;
+}
+
+.bnpAccount-svg,
+.bnpAccount-btn {
+	vertical-align: middle;
+}
+
+.bnpAccount-btn {
+	border:none;
+	color: #fff;
+	display: inline-block;
+	position: relative;
+	text-transform: none;
+}
+
+.bnpAccount-btn--add--big {
+	font-size: 2.5rem;
+    line-height: 1;
+}
+
+.bnpAccount-btn--addInputLike {
+    color: #7d7d7d;
+    margin-left: 5px;
+    padding-right: 7px;
+    padding-left: 8px;
+}
+
+.bnpAccount-btn--downloadLateral {
+	position: fixed;
+	z-index: 1;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}
+
+.bnpAccount-infoRequest--popUp {
+	position: absolute;
+	z-index: 1;
+	
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px hsla(0,0%,0%,.3);
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding-left: 20px;
+	padding-right: 20px;
+}
+
+.bnpAccount-infoRequest--popUp::after {
+	content: '';
+    height: 0;
+    width: 0;
+    border-width: 22px 15px 0;
+    border-top-color: #fff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-style: solid;
+    border-bottom-style: none;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-filter: drop-shadow(2px 2px 1px hsla(0,0%,0%,.3));
+}
+
+.bnpAccount-btn,
+.bnpAccount-checkbox {
+	transition: background-color .3s ease-in;
+}
+
+.bnpAccount-btnReverse {
+	border-radius: 2px;
+	transition: color .3s ease-in;
+}
+
+[class*=bnpAccount-grid] label,
+[class*=bnpAccount-grid] .bnpAccount-label-like,
+[class*=bnpAccount-grid] .bnpAccount-field,
+.bnpAccount-actionBtns-container [class*=bnpAccount-fieldGroup--],
+.bnpAccount-p,
+.bnpAccount-btn--small {
+	font-size: 1.2rem;
+}
+
+.bnpAccount-btn--small {
+	padding: .4rem 1rem;
+}
+
+.bnpAccount-btn--normal {
+	padding: .8rem;
+}
+
+.bnpAccount-transferList,
+.bnpAccount-resumeDataList,
+[class*=bnpAccount-btn--normal],
+.bnpAccount-completeLevel-subValue,
+.bnpAccount-table--rules {
+	font-size: 1.3rem;
+}
+
+.bnpAccount-fieldSet > legend,
+.bnpAccount-legendLike,
+.bnpAccount-btn--big,
+.bnpAccount-companyResume-subTitle {
+	font-size: 1.4rem;
+}
+
+[class*=bnpAccount-fieldGroup--],
+.bnpAccount-btnLink--default {
+	font-size: 1.5rem;
+}
+
+.bnpAccount-btn--normal--companyResume,
+.bnpAccount-btn--normalSubmit {
+	min-height: 40px;
+}
+
+
+.bnpAccount-btn--normalSubmit {
+	min-width: 200px;
+}
+
+.bnpAccount-btn--normal--companyResume {
+	background-color: hsla(0, 0%, 100%, .25);
+	color: inherit;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.bnpAccount-infoRequest-btnClose {
+	background-color: transparent;
+	color: #bcbcbc;
+	position: absolute;
+	right: 15px; top: 15px;
+	z-index: 3;
+	font-size: 17px;
+    line-height: 1;
+    padding: 0;
+}
+
+.bnpAccount-infoRequest-actionChoice {
+	width: 50%;
+}
+
+.bnpAccount-infoRequest-ruleAmount {
+	width: 25%;
+}
+
+.bnpAccount-btn--big {
+	padding: 1.5rem 2.3rem;
+}
+
+.bnpAccount-btn--action,
+input[type=checkbox]:checked ~ .bnpAccount-checkbox {
+	background-color: #00bd6d;
+}
+
+.bnpAccount-btn--action:hover {
+	background-color: hsl(155,79%,47%);
+}
+
+.bnpAccount-btn--danger {
+	background-color: #f54c4c;
+}
+
+.bnpAccount-btn--danger:hover {
+	background-color: #f43434;
+}
+
+.bnpAccount-btn--default {
+	background-color: #222;
+}
+
+.bnpAccount-btn--default:hover {
+	background-color: hsl(0,0%, 34%);
+}
+
+.bnpAccount-btn--important {
+	background-color: #000;
+}
+
+.bnpAccount-btn--important:hover {
+	background-color: hsl(0,0%, 21%);
+}
+
+.bnpAccount-btn[disabled=disabled]{
+	background-color: #ccc;
+	color: #9c9c9c;
+}
+
+.bnpAccount-btnReverse {
+	background-color: #fff;
+	border: 1px solid currentColor;
+}
+
+.bnpAccount-btnReverse:hover {
+	text-decoration: underline;
+}
+
+.bnpAccount-btnReverse--action:not([disabled]),
+.bnpAccount-legendLike,
+.bnpAccount-highLight {
+	color: #00bd6d;
+}
+
+.bnpAccount-btnReverse--default {
+	color: #222;
+}
+
+.bnpAccount-btnReverse--important {
+	color: #000;
+}
+
+.bnpAccount-btnLink {
+	background-color: transparent;
+}
+
+.bnpAccount-resumeDataList > dt,
+.bnpAccount-btnLink--default {
+	color: #4a4a4a;
+}
+
+.bnpAccount-btnLink--default {
+	overflow: hidden;
+}
+
+.bnpAccount a:not([class*=bnpAccount-btn]) {
+	color: inherit;
+}
+
+.bnpAccount a[class*=bnpAccount-btn] {
+	font-family: inherit;
+	text-decoration: none;
+}
+
+.bnpAccount label {
+	cursor: pointer;
+}
+
+.bnpAccount button {
+	cursor: pointer;
+}
+
+.bnpAccount button:focus,
+.bnpAccount-field:focus {
+	outline: none;
+} 
+
+.bnpAccount-field,
+.bnpAccount-btn--addInputLike {
+	background-color: #fff;
+	border:1px solid #eee;
+	box-shadow: inset 1px 1px 5px hsla(0, 0%, 0%, .25);
+}
+
+.bnpAccount-field {
+	height: 35px;
+	line-height: 35px;
+	padding-left: 11px;
+}
+
+.bnpAccount-transferList {
+	border: 1px solid #eee;
+	min-height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.bnpAccount-transferList .is-open {
+	min-height: 30px;
+}
+
+.bnpAccount-transferList-collegeTtile {
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.bnpAccount-transferList-collegeTtile .bnpAccount-btn {
+	float: right;
+	color: #00bd6d;
+	padding: 0;
+	margin-top: 4px;
+	margin-right: 5px;
+	background-color: transparent;
+}
+
+.bnpAccount-arrowIcon {
+	display: block;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-left: 7px solid currentColor;
+    transition: transform .5s ease-in-out;
+}
+
+.is-active .bnpAccount-arrowIcon {
+	transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.bnpAccount-transferList li {
+	font-weight: 700;
+	min-height: inherit;
+	padding: 5px;
+}
+
+.bnpAccount-transferList li:not(.bnpAccount-transferList-mainTitle){
+	border: inherit;
+	margin-top: 5px;
+}
+
+.bnpAccount-transferList li li{
+    border: 1px solid #eee;
+}
+
+.bnpAccount-transferList > .bnpAccount-transferList-mainTitle{
+	background-color: #00bd6d;
+}
+
+.bnpAccount-transferList > li.ui-sortable-helper{
+	border-top: 0;
+	box-shadow: 1px 1px 5px #d5d5d5;
+}
+
+.bnpAccount-fieldGroup {
+	position: relative;
+	transition: background-color .3s ease-in;
+}
+
+.bnpAccount-moreInfo {
+	background-color: #e0e0e0;
+	display: inline-block;
+	margin-right: 1rem;
+	margin-left: .5rem;
+	border-radius: 50%;
+	font-size: 1rem;
+	line-height: 2;
+	text-align: center;
+	width: 2em;
+}
+
+.bnpAccount-pullRight,
+label > .bnpAccount-moreInfo {
+	float: right;
+}
+
+.bnpAccount-pullLeft {
+	float: left;
+}
+
+.js-fieldError::after,
+.js-fieldCorrect::after {
+	content: '';
+	position: absolute;
+	right: -20px; bottom: 17px;
+	transform: translateY(50%);
+}
+
+.js-fieldError::after {
+	background-image: url(../../img/svg/fieldError.svg);
+	width: 11px;
+	height: 11px;
+}
+
+.js-fieldCorrect::after {
+	background-image: url(../../img/svg/fieldCorrect.svg);
+	width: 13px;
+	height: 10px;
+}
+
+/*
+********* GRID *********
+*/
+
+[class*=bnpAccount-grid] {
+	-moz-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.bnpAccount-birthDateContainer,
+[class*=bnpAccount-grid] {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.bnpAccount-restrictedWidth {
+	width: 665px;
+}
+
+[class*=bnpAccount-grid] > * {
+	flex: 0 0 auto;
+	display: block;
+}
+
+[class*=bnpAccount-grid] label {
+	margin-bottom: 8px;
+}
+
+[class*=bnpAccount-grid] label,
+[class*=bnpAccount-grid] .bnpAccount-field {
+	display: block;
+	width: 100%;
+}
+
+.bnpAccount-birthDateContainer .bnpAccount-field {
+	min-width: 0;
+}
+
+.bnpAccount-grid-1 > * {
+	width: 100%;
+}
+
+.bnpAccount-grid-2 > * {
+	width: calc(50% - 72px/2);
+}
+
+.bnpAccount-grid-2 > .bnpAccount-threeFifth {
+	width: calc(50% + 72px/2);
+}
+
+.bnpAccount-grid-2 > .bnpAccount-fieldGroup:nth-child(odd) {
+	margin-right: 72px;
+}
+
+[class*=bnpAccount-grid] .bnpAccount-grid-push {
+	margin-left: 50%;
+}
+
+[class*=bnpAccount-grid] .bnpAccount-grid-pull {
+	margin-right: 50%;
+}
+
+/***********************************/
+/* Gestion des boites de dialogues */
+
+.button, .ui-dialog .ui-button {
+	background: url("../../img/sprite-btn.png") no-repeat scroll left top;
+    padding: 6px 19px 25px 19px;
+   	cursor: pointer;
+    display: block;
+    height: 35px;
+    text-decoration: none;
+    color: #FFFFFF;
+   	float: left;
+	margin-right: 2px;
+    font-family: 'BNPType';
+    border: medium none;
+}
+
+.button:hover, .ui-dialog .ui-button:hover {
+    background-position: left -80px;
+}
+
+.noTitleDialog .ui-dialog-titlebar {
+	display:none;
+}
+
+.noTitleDialog .ui-dialog-buttonpane {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.dialogWithClose .ui-dialog-titlebar {
+	cursor: initial;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+.dialogWithClose .ui-dialog-titlebar .ui-dialog-title {
+	margin: 0;
+}
+
+.dialogWithClose .ui-dialog-titlebar button {
+	background: none;
+	height: 10px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+}
+
+.dialogWithClose .ui-dialog-titlebar .ui-icon-closethick {
+	background-image: url("../../img/ui-icons_cd0a0a_256x240.png");
+}
+
+#preferencesForm .bnpAccount-btn {
+	margin-left: 20px;
+}
+

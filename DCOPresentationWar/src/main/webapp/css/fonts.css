@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'BNPType';
+    src: url('../fonts/bnpp_type_regular.eot');
+    src: url('../fonts/bnpp_type_regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bnpp_type_regular.woff') format('woff'),
+         url('../fonts/bnpp_type_regular.ttf') format('truetype'),
+         url('../fonts/bnpp_type_regular.svg#BNPType') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNPType';
+    src: url('../fonts/bnpp_type_bold.eot');
+    src: url('../fonts/bnpp_type_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bnpp_type_bold.woff') format('woff'),
+         url('../fonts/bnpp_type_bold.ttf') format('truetype'),
+         url('../fonts/bnpp_type_bold.svg#BNPType') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}

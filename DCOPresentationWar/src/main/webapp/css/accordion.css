@@ -1,0 +1,106 @@
+#main{
+  position:relative; 
+  min-height:0;
+}
+#side{
+  float:right;
+  display:inline;
+  width:18em;
+  padding-bottom:1.3em;
+  position:relative;
+  overflow:hidden
+}
+.clear {clear:both}
+
+/* --- Headings --- */
+
+h4 a, h5 a {padding:3px 10px}
+
+
+#main h2 {background-color:#f0f0f0}
+
+#main h2.country_section{
+	background: none repeat scroll 0 0 #3d5f5d;
+	border-radius: 0;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0;
+}
+
+#side, #side h2, #side h3 {background:#000; color:#e3e3e3}
+
+#side h2 {border-bottom:1px solid #484b51}
+
+/* --- Links --- */
+a {padding:1px; border:0 solid #e0e0e0}
+
+.accordion .switch a {text-decoration:none}
+
+.accordion a{border-width:1px;}
+
+a:hover, a:focus, a:active {border-color:#bcd; text-decoration:none; outline:0 none}
+
+#side a {display:block; border-width:0 0 1px; border-color:#445; color:#f0f0f0}
+
+#side a:hover, #side a:active, #side a:focus {background-color:#334}
+
+/* --- Accordion --- */
+.js #main .accordion {visibility:hidden}
+
+.js #side .accordion {display:none}
+
+.accordion {margin:0; padding:0}
+
+.accordion li {list-style-type:none}
+
+.accordion li.last-child {margin-left:19px; list-style-type:disc}
+
+#side ul.accordion ul {margin:0; padding:0 0 0 20px;}
+
+.accordion .outer {border:1px solid #dadada; border-width:0 1px 1px; background: #fff}
+
+.accordion .inner {margin-bottom:0; padding:.5em 20px 1em; overflow:hidden}
+
+.accordion .inner .inner {padding-bottom:0}
+
+.accordion .h {padding-top:.3em}
+
+.accordion p {margin:.5em 0 1em}
+
+.switch {margin-bottom:.5em}
+
+/*  
+  Add styles for all links in the 'accordion':
+.accordion a {...}
+*/    
+
+a.trigger {
+	display:block; 
+	background-image: url(../img/bottomArrow.png); 
+	background-repeat: no-repeat; 
+	background-position: 950px 50%;  
+	font-weight:700;
+}
+
+a.trigger.open {background-image: url(../img/upArrow.png)}
+
+.last-child a.trigger{padding-left:1px; background-image:none; font-weight:normal}
+
+#main a.trigger {
+	background-color:#f0f0f0;
+    padding-top: 6px;
+	}
+
+/* #main a.trigger.open {border-color:#dadada; background-color:#e7e7e7} */
+#main a.trigger.open {
+    /*background: none repeat scroll 0 0 #BDBDBD;*/
+    border-color: #DADADA;
+    padding-top: 6px;
+}
+
+#main a:hover.trigger.open, #main a:focus.trigger.open, #main a:active.trigger.open {border-color:#bcd}
+
+#main .switch a.open {background:transparent none}
+
+#side a.active{font-weight:700; color:#f72; text-decoration:none}
+
