@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: aubay
+Build-Jdk: 1.8.0_65
+Class-Path: ejb-api-3.0.jar DCOCommon-1.2.47.jar logback-classic-1.0.9
+ .jar slf4j-api-1.7.2.jar logback-core-1.0.9.jar commons-lang3-3.1.jar
+  DCOBusinessEjbClient-1.2.47.jar
+Created-By: Maven Integration for Eclipse
+

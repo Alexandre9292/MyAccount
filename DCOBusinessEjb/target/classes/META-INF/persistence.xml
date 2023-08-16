@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="DCO" transaction-type="JTA">
+        <jta-data-source>jdbc/dco</jta-data-source>
+        <class>com.bnpp.dco.business.dto.Address</class>
+        <class>com.bnpp.dco.business.dto.Role</class>
+        <class>com.bnpp.dco.business.dto.User</class>
+        <class>com.bnpp.dco.business.dto.Country</class>
+        <class>com.bnpp.dco.business.dto.DateFormat</class>
+        <class>com.bnpp.dco.business.dto.Entities</class>
+        <class>com.bnpp.dco.business.dto.Language</class>
+        <class>com.bnpp.dco.business.dto.ParamTech</class>
+        <class>com.bnpp.dco.business.dto.ParamTechId</class>
+        <class>com.bnpp.dco.business.dto.Document</class>
+        <class>com.bnpp.dco.business.dto.DocumentType</class>
+        <class>com.bnpp.dco.business.dto.Preferences</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+       	<properties>
+       		<property name="eclipselink.logging.level.sql" value="FINE"/>
+				<property name="eclipselink.logging.parameters" value="true"/>
+       	</properties>
+    </persistence-unit>
+</persistence>
